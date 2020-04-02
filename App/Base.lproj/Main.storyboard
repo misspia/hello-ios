@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,24 +15,52 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yDy-8y-1oE">
-                                <rect key="frame" x="0.0" y="393" width="414" height="110"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yDy-8y-1oE">
+                                <rect key="frame" x="0.0" y="343" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bH-Qo-FIx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFy-TW-dNz">
-                                        <rect key="frame" x="0.0" y="40" width="414" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
+                                        <color key="backgroundColor" red="0.27551026342540208" green="0.39575476722959679" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Increment">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="increment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lbr-Uh-yuk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8v5-cE-h30">
-                                        <rect key="frame" x="0.0" y="80" width="414" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="217" y="0.0" width="197" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.43591049258104841" blue="0.3793998059127931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Decrement">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decrement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qV-TP-D1C"/>
+                                        </connections>
                                     </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uEu-hO-iE1"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-Vh-9Gj">
+                                <rect key="frame" x="0.0" y="443" width="414" height="20.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click a button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybz-3A-J8Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePp-Zf-Jit">
+                                        <rect key="frame" x="212" y="0.0" width="202" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -40,10 +68,19 @@
                         <constraints>
                             <constraint firstItem="yDy-8y-1oE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="97b-MX-07v"/>
                             <constraint firstItem="yDy-8y-1oE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Grp-HD-kVR"/>
+                            <constraint firstItem="C8P-Vh-9Gj" firstAttribute="top" secondItem="yDy-8y-1oE" secondAttribute="bottom" constant="50" id="MTE-tL-kAg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yDy-8y-1oE" secondAttribute="trailing" id="VsV-jk-ZWY"/>
+                            <constraint firstItem="C8P-Vh-9Gj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kh3-zI-Be6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C8P-Vh-9Gj" secondAttribute="trailing" id="uhs-2C-3lO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="BFy-TW-dNz" id="zFe-7I-fQU"/>
+                        <outlet property="button2" destination="8v5-cE-h30" id="anZ-1J-ZYW"/>
+                        <outlet property="countLabel" destination="ePp-Zf-Jit" id="NWW-qD-ZJd"/>
+                        <outlet property="label" destination="Ybz-3A-J8Z" id="y0n-6N-M9e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
