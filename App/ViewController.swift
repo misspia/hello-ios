@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var textInput: UITextField!
     
     var count: Int = 0;
     
@@ -44,6 +47,18 @@ class ViewController: UIViewController {
     
     func updateCountLabel() {
         countLabel.text = String(count)
+    }
+    
+    @IBAction func onChange(_ sender: UITextField) {
+//        if let name = sender.text {
+//            nameLabel.text = name
+//        }
+    }
+    
+    @IBAction func onEdit(_ sender: UITextField) {
+        if let name = sender.text {
+            nameLabel.text = name
+        }
     }
 }
 

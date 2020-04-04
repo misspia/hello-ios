@@ -63,15 +63,42 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;name&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4I-ry-OOn">
+                                <rect key="frame" x="0.0" y="243.66666666666666" width="414" height="19.333333333333343"/>
+                                <color key="backgroundColor" red="1" green="0.43591049259999998" blue="0.3793998059" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6L-t1-0aX">
+                                <rect key="frame" x="10" y="172" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kbh-BU-747"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="TsT-SM-Ry7"/>
+                                    <action selector="onEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="0WY-bh-OY6"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yDy-8y-1oE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="97b-MX-07v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l6L-t1-0aX" secondAttribute="trailing" id="C5f-ja-ZkN"/>
                             <constraint firstItem="yDy-8y-1oE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Grp-HD-kVR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k4I-ry-OOn" secondAttribute="trailing" id="Lcc-YH-WAK"/>
                             <constraint firstItem="C8P-Vh-9Gj" firstAttribute="top" secondItem="yDy-8y-1oE" secondAttribute="bottom" constant="50" id="MTE-tL-kAg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yDy-8y-1oE" secondAttribute="trailing" id="VsV-jk-ZWY"/>
+                            <constraint firstItem="yDy-8y-1oE" firstAttribute="top" secondItem="k4I-ry-OOn" secondAttribute="bottom" constant="80" id="XFX-wr-dln"/>
+                            <constraint firstItem="l6L-t1-0aX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="btv-B7-kNB"/>
                             <constraint firstItem="C8P-Vh-9Gj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kh3-zI-Be6"/>
+                            <constraint firstItem="k4I-ry-OOn" firstAttribute="top" secondItem="l6L-t1-0aX" secondAttribute="bottom" constant="41.670000000000002" id="pNJ-Co-s38"/>
+                            <constraint firstItem="k4I-ry-OOn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tTZ-gf-NoN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C8P-Vh-9Gj" secondAttribute="trailing" id="uhs-2C-3lO"/>
+                            <constraint firstAttribute="trailing" secondItem="l6L-t1-0aX" secondAttribute="trailing" constant="10" id="xBy-7E-1ha"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,11 +107,13 @@
                         <outlet property="button2" destination="8v5-cE-h30" id="anZ-1J-ZYW"/>
                         <outlet property="countLabel" destination="ePp-Zf-Jit" id="NWW-qD-ZJd"/>
                         <outlet property="label" destination="Ybz-3A-J8Z" id="y0n-6N-M9e"/>
+                        <outlet property="nameLabel" destination="k4I-ry-OOn" id="ZKE-Dp-MO5"/>
+                        <outlet property="textInput" destination="l6L-t1-0aX" id="SWn-1h-rcj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.77173913043478"/>
         </scene>
     </scenes>
 </document>
